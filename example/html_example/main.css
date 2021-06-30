@@ -1,0 +1,28 @@
+body {
+    margin : 0px;
+    pedding : 0px;
+}
+
+.header {
+    width: auto;
+    height: auto;
+    background: yellowgreen;
+}
+
+.container {
+    background: tomato;
+    width: 980px;
+    margin : auto;
+}
+
+.container-left {
+
+}
+
+.logo {
+
+}
+
+.menu {
+
+}
