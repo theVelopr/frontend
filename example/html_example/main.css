@@ -4,15 +4,17 @@ body {
 }
 
 .header {
-    width: auto;
-    height: auto;
-    background: yellowgreen;
+    /* width: auto;
+    height: auto; */
+    background: white;
+    border-bottom: 1px solid lightgray;
 }
 
 .container {
-    background: tomato;
+    /* background: tomato; */
     width: 980px;
     margin : auto;
+    padding: 20px 0;
 }
 
 .container-left {
@@ -20,9 +22,26 @@ body {
 }
 
 .logo {
+    float: left;
+    margin-right: 5px;
+}
 
+.logo img {
+    display: block;
 }
 
 .menu {
+    float: left;
+}
 
+.menu-item {
+    float: left;
+    /* margin-right: 10px; */
+    padding: 8px 10px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
