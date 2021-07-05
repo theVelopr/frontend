@@ -1,0 +1,70 @@
+header {
+    background: tomato;
+    margin : 10px;
+    padding : 20px;
+}
+
+header nav {
+
+}
+
+header nav ul {
+    display: flex; /* 수평으로 설정. 찾아보기 */
+}
+
+header nav ul li {
+    list-style: none; /* 찾아보기 */
+    margin: 10px;
+}
+
+main {
+    display: flex;
+}
+
+section {
+    width: 70%;
+    background: tomato;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box; /* 찾아보기 - 패딩이 늘어나지 않게함 */
+}
+
+section h1 {
+
+}
+
+article {
+    background: yellowgreen;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+article h2 {
+
+}
+
+article p {
+
+}
+
+aside { /* 광고 영역 */
+    width: 30%;
+    background: tomato;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    background: tomato;
+    margin: 10px;
+    padding: 20px;
+}
+
+footer address {
+
+}
+
+footer address a {
+    display: block; /* a 태그가 인라인 요소라 자동으로 수평배열이 되는데, display를 block으로 지정해줌으로써, 수직배열이 됨*/
+}
