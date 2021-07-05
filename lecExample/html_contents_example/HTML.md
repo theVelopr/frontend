@@ -37,7 +37,7 @@ header나 footer는 div를 대체해서 사용 할 수 있지만, div과 다르�
 
 07 컨텐츠 구분 - section (블럭요소)
 - 문서의 일반적인 영역을 설정
-- 일반적으로 `<h1>~<h6>`를 포함하여 식별
+- 일반적으로 `<h1>~<h6>`를 포함하여 식별 
  ```css
  section {display:block;}
  ```
