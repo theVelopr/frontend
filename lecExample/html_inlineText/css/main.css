@@ -1,0 +1,33 @@
+h2 {
+    padding-bottom: 1000px;
+}
+
+
+/* 
+Lecture 02
+연동된 css
+a {
+    font-weight: bold;
+    width: 100px;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    background: orange;
+}
+ */
+
+ /* 
+ Lecture 03
+ 연동된 css
+
+ h2 {
+    padding-bottom: 1000px;
+}
+스크롤을 위해 이렇게 설정함.
+ */

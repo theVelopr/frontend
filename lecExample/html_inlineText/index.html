@@ -3,12 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Elements</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <a href="https://www.google.com">Google target이 없어도 기본값으로 _self 설정되어있음</a>
-    <a href="https://www.google.com" target="_blank">Google 새 창에서 열기</a> 
-    <a href="./README.md" download>README.md</a>
-    <!-- download="download"인데, 참거짓이며 같은 것을 입력하므로 download만 명시해줌(작동함)-->
+    <ul>
+        <li><a href="#title1">제목1</a></li>
+        <li><a href="#title2">제목2</a></li>
+    </ul>
+    <h2 id="title1">제목1</h2>
+    <h2 id="title2">제목2</h2>
+    <h2 id="title3">제목3</h2>
 </body>
 </html>
+
+<!-- 
+    Lecture 01
+    <a href="https://www.google.com">Google target이 없어도 기본값으로 _self 설정되어있음</a>
+    
+    <a href="https://www.google.com" target="_blank">Google 새 창에서 열기</a> 
+    
+    <a href="./README.md" download>README.md</a>
+    download="download"인데, 참거짓이며 같은 것을 입력하므로 download만 명시해줌(작동함)
+    
+    <a href="./images/imgFile.jpg">Image download</a>
+    download 속성을 명시하지 않으면 파일을 열게됨.
+ -->
+
+ <!-- 
+     Lecture 02
+    <a href="https://www.google.com">Google</a>
+    css와 연동함.
+  -->
+
+<!-- 
+    Lecture 03
+    id는 class속성과 비슷한데, 고유해야하므로 같은 id를 쓸 수 없다.
+    ex) id="abc", id="abc" <=== 불가능
+
+    -------------------------------------
+    <li><a href="#title1">제목1</a></li>
+    <h2 id="title1">제목1</h2>
+    이런식으로 경로를 지정할때 #를 이용하여 id값을 입력해줘야 링크가 된다.
+    # 은 id 선택자 이다. 
+
+    ---
+        <ul>
+        <li><a href="#title1">제목1</a></li>
+        <li><a href="#title2">제목2</a></li>
+    </ul>
+    <h2 id="title1">제목1</h2>
+    <h2 id="title2">제목2</h2>
+    <h2 id="title3">제목3</h2>
+ -->
