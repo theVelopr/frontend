@@ -45,3 +45,35 @@
     <dd>Milk is a nutrient-rich, white liquid food produced by the mommary glands of mommals.</dd>
 </dl>
 ```
+
+## `<p>` 
+- 하나의 문단을 설정
+- 일반적으로 정보통신보조기기 등은 다음 문단으로 넘어갈 수 있는 단축기를 제공함(웹접근성관련)
+- block 요소이다.
+
+## `<hr/>`
+- 문단의 분리(주제에 의한)를 위해 설정
+- Horizontal Rule
+- 대부분의 경우 수평선(border)으로 표시(표현적 관점)되나 의미적 관점으로만 사용해야 함.
+- block 요소이다.
+- 분리를 위해 수평선이 들어가는거지 수평선을 넣기위해 분리하면 안됨
+
+```css
+hr {
+    border: none;
+    border-top: 2px dashed red;
+}
+```
+
+## `<pre>`
+- 서식이 미리 짖어된 텍스트를 설정 (Preformatted Text)
+- 텍스트의 공백과 줄바꿈을 유지하여 표시할 수 있음
+- 기본적으로 Monospace 글꼴 계열로 표시됨.
+- block 요소이다.
+- monospace 글꼴 : 문자 각각의 넓이가 동이한 형태이다.
+- pre 태그를 쓰려면, 입력하려는 글 바로 앞위에 붙여서 써야한다. 띄어쓰기, 줄바꿈이 그대로 반영됨. 즉, 일반적인 태그 타이핑하면, 이상해짐.
+
+## `<blockquote>`
+- 일반적인 인용문을 설정
+- cite | 인용된 정보의 URL
+- block 요소이다.
