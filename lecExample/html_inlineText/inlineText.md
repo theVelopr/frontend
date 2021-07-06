@@ -66,4 +66,91 @@ Using <abbr title="HyperText Markup Language">HTML</abbr> is fun and easy!
 - 기본적으로 이탤릭체로 표시됨
 - inline 요소
 
+## `<dfn>`
+> Lecture 06
+- 용어를 정의할 때 사용
+- Definition
+- inline 요소
 
+## `<cite>`
+> Lecture 06
+- 창작물에 대한 참조를 설정
+- 기본적으로 이탤릭체로 표시됨
+- inline 요소
+```html
+<cite>The Scream</cite> by Edward Munch. Painted in 1893.
+```
+
+## `<q>`
+> Lecture 06
+- 짧은 인용문을 설정
+- 긴 인용문을 설정할 경우 `<blockquote>`를 사용 
+- inline 요소
+
+| 속성 | 의미 | 값 |
+|---|--|---|
+| cite | 인용된 정보의 URL | URL |
+
+## `<u>`
+> Lecture 06
+- 밑줄이 있는 글자를 설정
+- css를 활용하여 밑줄을 표현 하는게 정석임 (css 적용 불가능 한 부분에서만 사용하는걸 추천)
+- Underline
+- 순수하게 꾸미는 용도의 요소로 사용
+- `<a>`와 햇갈릴 수 있는 위치에서 사용하지 않도록 주의
+- `<span style="text-decoration: underline;">`을 활용할 수 있을 경우에는 사용을 권장하지 않음
+- inline 요소
+
+## `<code>`
+> Lecture 06
+- 컴퓨터 코드 범위를 설정
+- 기본적으로 고정폭(Monospace) 글꼴 계열로 표시됨.
+- 독자에게 어디까지가 코드인지 알려주기 위해 사용함.
+- inline 요소
+
+```html
+<code>document.getElementById('id-value')</code> is a piece of computer code.
+```
+
+## `<kdb>`
+> Lecture 06
+- 텍스트 입력 장치에서 사용자 입력을 나타내는 텍스트 범위를 설정
+- inline 요소
+```html
+<p>
+    <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd>
+</p>
+
+<kbd>ESC</kbd>
+```
+- 일반 텍스트랑 섞이면 독자입장에서는 명확히 볼 수 없기 때문에 css에서 꾸며주는게 좋다.
+```css
+kbd {
+    padding: 0 3px;
+    border-radius: 3px;
+    border-top: 2px solid rgb(240, 240, 240);
+    border-bottom: 2px solid rgb(205, 205, 205);
+    border-left: 2px solid rgb(240, 240, 240);
+    border-right: 2px solid rgb(225, 225, 225);
+}
+```
+
+## `<sup>`, `<sub>`
+> Lecture 06
+- 위 첨자(`<sup>`)와 아래 첨자(`<sub>`)를 설정.
+- Superscripted text, Subscript text
+- inline 요소
+- 효과 : 위 첨자 지수, 아래첨자는 H2O에서 원자수
+
+## `<time>`
+> Lecture 06
+- 날짜나 시간을 나타내기 위한 목적으로 사용
+- IE 지원 불가
+- inline 요소
+
+| 속성 | 의미 | 값 |
+|-|-|-|
+| datetime | 유효한 날짜 문자 | date |
+
+## `<span>`
+> Lecture 06
