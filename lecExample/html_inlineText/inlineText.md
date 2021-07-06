@@ -15,3 +15,13 @@
 | target | 링크 URL의 표시(브라우저 탭) 위치 | _self, _blank | _self | |
 | type | 링크 URL의 MIME 타입 | text/html ... | | |
 
+## `<abbr>`
+- 약어를 지정
+- Abbreviation
+- 보통 title(전역속성) 속성을 사용하여 전체 글자나 설명을 제공
+- inline 요소
+- 예시
+```html
+Using <abbr title="HyperText Markup Language">HTML</abbr> is fun and easy!
+```
+
