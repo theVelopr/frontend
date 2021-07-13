@@ -87,6 +87,7 @@ w 단위를 쓰는것을 추천
 
 ### `<iframe>`
 - 다른 HTML 페이지를 현재 페이지에 삽입. (중첩된 브라우저 컨텍스트(프레임)를 표시)
+- inline 요소
 
 |속성|의미|값|기본값|
 |-|-|-|-|
@@ -98,4 +99,33 @@ w 단위를 쓰는것을 추천
 |frameborder|프레임 테두리 사용 여부|0, 1|1|
 |sandbox|보안을 위한 읽기 전용으로 삽입|allow-form : 양식 제출 가능, allow-scripts : 스크립트 실행 가능, allow-same-origin : 같은 출처(모데인)의 리소스 사용 가능| |
 
+```html
+    <iframe src="https://www.danawa.com" 
+    frameborder="0"
+    width="70%"
+    height="400px"
+    style="border:4px solid red">
+    </iframe>
+```
 
+
+### `<canvas>`
+- Canvas API나 WebGL API를 사용하여 그래픽이나 애니메이션을 랜더링
+- JavaScript를 모르면 사용 할 수 없는 태그
+- inline 요소
+
+|속성|의미|
+|width|캔버스의 가로 너비|
+|height|캔버스의 세로 너비|
+
+```html
+  <canvas id="canvas" width="200" height="150"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'rgb(200, 0, 0)';
+    ctx.fillRect(10, 10, 50, 50); 
+    ctx.fillStyle = 'rgb(0, 0, 200, 0.5)';
+    ctx.fillRect(30, 30, 50, 50); 
+  </script>
+```
