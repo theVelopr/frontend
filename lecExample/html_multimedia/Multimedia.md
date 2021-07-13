@@ -186,3 +186,28 @@ w 단위를 쓰는것을 추천
         </body>
         ```
 
+### `<noscript>`
+- 스크립트를 지원하지 않는 경우에 삽입할 HTML을 정의
+- inline 요소
+
+- 예시
+  - index.html
+    ```html
+    <body>
+    안녕하세요!
+    <noscript>
+      자바스크립트를 지원하지 않는 환경입니당.
+    </noscript>
+    </body>
+    ```
+    noscript.html
+    ```html
+    <body>
+    <iframe src="./index.html" 
+    frameborder="0"
+    style="border : 4px solid red"
+    sandbox></iframe>
+    </body>
+    ```
+    2개의 html 파일을 만들어서 위의 코드를 실행해보면, noscript 환경에서 작동되는 것을 확인할 수 있다.
+
