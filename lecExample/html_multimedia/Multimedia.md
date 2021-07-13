@@ -65,3 +65,20 @@ w 단위를 쓰는것을 추천
 |src|콘텐츠 URL|	URL	| |
 |width| 동영상 가로 너비| | |
 |height| 동영상 세로 너비| | |
+
+## `<figure>`, `<figcaption>`
+- `<figure>` 는 이미지나 삽화, 도표 등의 영역을 설정
+  - block 요소
+- `<figcaption>`은 `<figure>`에 포함되어 이미지나 삽화 등의 설명을 표시
+  - inline 요소
+- 브라우저는 분리가 되어 있다는걸 알 수없기 때문에 이 태그를 통해 서로 연결 되어 있다는 것을 알려줌
+  - 사용자보다는 브라우저에게 이 요소들이 연결되어 있다고 알려줌  
+  
+```html
+  <figure>
+    <img src="./images/heropy.png" alt="HEROPY">
+    <!-- <p>HEROPY 이미지이다.</p> -->
+    <figcaption>HEROPY 이미지이다.</figcaption>
+  </figure>
+```
+
