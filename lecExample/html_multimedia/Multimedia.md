@@ -48,3 +48,20 @@ w 단위를 쓰는것을 추천
 |src|콘텐츠 URL|	URL	| |
 |muted|	음소거 여부|	불린(Boolean)| |
 
+## `<video>`
+> Lecture 07
+- 동영상 컨텐츠(MP4)를 삽입
+- inline 요소
+- 속성이 autoplay가 지정된 경우, preload는 무시됨.
+
+|속성|	의미|	값|	기본값|
+|-|-|-|-|
+|autoplay|	준비되면 바로 재생|	불린(Boolean)| |	
+|controls|	제어 메뉴를 표시|	불린(Boolean)| |	
+|loop|	재생이 끝나면 다시 처음부터 재생|	불린(Boolean)| |	
+|muted| 음소거 여부 | 불린(Boolean) | |
+|poster| 동영상 썸네일 이미지 URL | URL | |
+|preload|	페이지가 로드될 때 파일을 로드할지의 지정(힌트 제공)|	none: 로드하지 않음, metadata: 메타데이터만 로드, auto: 전체 파일 로드|	metadata|
+|src|콘텐츠 URL|	URL	| |
+|width| 동영상 가로 너비| | |
+|height| 동영상 세로 너비| | |
