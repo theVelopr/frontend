@@ -1,6 +1,7 @@
 # HTML 요소 - 멀티미티어 & 내장 컨텐츠 & 스크립트
 
-## `<img/>`
+## 멀티미디어
+### `<img/>`
 > Lecture 07
 - 이미지 삽입
 
@@ -33,7 +34,7 @@ w 단위를 쓰는것을 추천
 
 출처 : https://heropy.blog/2019/06/16/html-img-srcset-and-sizes/
 
-## `<audio>`
+### `<audio>`
 > Lecture 07
 - 소리 컨텐츠를 삽입
 - inline 요소
@@ -48,7 +49,7 @@ w 단위를 쓰는것을 추천
 |src|콘텐츠 URL|	URL	| |
 |muted|	음소거 여부|	불린(Boolean)| |
 
-## `<video>`
+### `<video>`
 > Lecture 07
 - 동영상 컨텐츠(MP4)를 삽입
 - inline 요소
@@ -66,7 +67,7 @@ w 단위를 쓰는것을 추천
 |width| 동영상 가로 너비| | |
 |height| 동영상 세로 너비| | |
 
-## `<figure>`, `<figcaption>`
+### `<figure>`, `<figcaption>`
 - `<figure>` 는 이미지나 삽화, 도표 등의 영역을 설정
   - block 요소
 - `<figcaption>`은 `<figure>`에 포함되어 이미지나 삽화 등의 설명을 표시
@@ -81,4 +82,5 @@ w 단위를 쓰는것을 추천
     <figcaption>HEROPY 이미지이다.</figcaption>
   </figure>
 ```
+
 
