@@ -96,7 +96,7 @@ w 단위를 쓰는것을 추천
 |width|프레임의 가로 너비| | |
 |height|프레임의 세로 너비| | |
 |allowfullscreen|전체 화면 모드 사용 여부|Boolean| |
-|frameborder|프레임 테두리 사용 여부|0, 1|1|
+|frameborder|프레임 테두리 사용 여부|`0`, `1`|`1`|
 |sandbox|보안을 위한 읽기 전용으로 삽입|allow-form : 양식 제출 가능, allow-scripts : 스크립트 실행 가능, allow-same-origin : 같은 출처(모데인)의 리소스 사용 가능| |
 
 ```html
@@ -129,3 +129,60 @@ w 단위를 쓰는것을 추천
     ctx.fillRect(30, 30, 50, 50); 
   </script>
 ```
+
+## 스크립트
+
+### `<script>`
+- 스크립트 코드를 문서에 포함하거나 참조(외부 스크립트)
+
+|속성|의미|값|특징|
+|-|-|-|-|
+|async|스크립트의 비동기적(Asynchronously) 실행 여부 | Boolean | `src` 속성 필수|
+|defer|문서 파싱(구분 분석) 후 작동 여부|Boolean| `src` 속성 필수|
+|src|참조할 외부 스크립트 URL| URL| 포함된 스크립트 코드는 무시됨|
+|type|<a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME 타입</a>|`text/javascript`(기본값)| |
+
+- 동기 (순차적) 비동기 (비순차적) 이라고 가볍게 표현할 수 있다
+- HTML이 작동을 할때 위에서 아래로 절차적으로 읽어들이는데, 그러다보니 실행이 안되는 요소들이 발생한다. 
+  - ```html
+    <head>
+    <meta charset="UTF-8">
+        <title>HTML Elements</title>
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <div id="my-name">theVelpr</div>
+    </body>
+    ```
+    ```javascript
+    const myName = document.getElementById('my-name');
+    console.log(myName.innerText);
+    ```
+  - 위의 코드를 실행해보면, div부분이 console에서 실행이 되지 않는 것을 볼 수 있는데, 절차적으로 읽다보니 실행이 되지 않는다. 이를 해결하는 방법으로는
+    - 1. 물리적으로 위치를 설정
+      - ```html
+        <head>
+        <meta charset="UTF-8">
+            <title>HTML Elements</title>
+            <link rel="stylesheet" href="./css/main.css">
+        </head>
+        <body>
+            <div id="my-name">theVelpr</div>
+
+            <script src="./js/main.js"></script>
+        </body>
+        ```
+    - 2. defer 속성을 추가 
+      - ```html
+        <head>
+            <meta charset="UTF-8">
+            <title>HTML Elements</title>
+            <link rel="stylesheet" href="./css/main.css">
+            <script src="./js/main.js" defer></script>
+        </head>
+        <body>
+            <div id="my-name">theVelpr</div>
+        </body>
+        ```
+
