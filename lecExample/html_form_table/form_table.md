@@ -29,3 +29,8 @@
 |colspan|확장하려는(병합) 열의 수| |`1`|
 |rowspan|확장하려는(병합) 행의 수| |`1`|
 
+### `<caption>`
+- 표의 제목을 설정
+  - 열리는  table 태그 바로 다음에 작성해야 함
+  - `<table>`당 하나의 `<caption>`만 사용 가능
+- table-caption이라는 display 속성을 가짐
