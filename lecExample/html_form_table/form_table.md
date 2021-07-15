@@ -1,8 +1,11 @@
 # HTML 요소 - 표 컨텐츠 & 양식
-> Lecture 08
+> Lecture 08 
+
+
 
 ## 표 컨텐츠
 ### `<table>`, `<tr>`, `<th>`, `<td>`
+---
 - 데이터 표(`<table>`)의 행(줄 / `<tr>`)과 열(칸, 셀(Cell) / `<th>`, `<td>`)을 생성.<br>
 (Table Row(tr), Table Header(th), Table Data(td))
 
@@ -10,6 +13,7 @@
 - table row와 cell의 속성의 특성은 칸이다.
 
 ### `<th>`
+---
 - '머리글 칸'을 지정
 
 |속성|의미|값|기본값|
@@ -21,6 +25,7 @@
 |scope|자신이 누구의 '머리글 칸'인지 명시|`col` : 자신의 열<br> `colgroup` : 모든 열 <br> `row` : 자신의 행<br> `rowgroup` : 모든 행<br> `auto` |`auto`|
 
 ### `<td>`
+---
 - '일반 칸'을 지정
 
 |속성|의미|값|기본값|
@@ -30,7 +35,17 @@
 |rowspan|확장하려는(병합) 행의 수| |`1`|
 
 ### `<caption>`
+---
 - 표의 제목을 설정
   - 열리는  table 태그 바로 다음에 작성해야 함
   - `<table>`당 하나의 `<caption>`만 사용 가능
 - table-caption이라는 display 속성을 가짐
+
+### `<colgroup>`, `<col/>`
+---
+- 표의 열들을 공통적으로 정의하는 컬럼(`<col>`)과 집합(`<colgroup>`)<br>
+  (Column, Column Group)
+
+|속성|의미|값|기본값|
+|-|-|-|-|
+|span|연결되는 열 수|숫자|`1`|
