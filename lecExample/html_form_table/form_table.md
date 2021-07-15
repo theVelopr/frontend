@@ -77,3 +77,32 @@
 |novalidate|서버로 전송시 양식 데이터의 유효성을 검사하지 않도록 지정| | |
 |target|서버로 전송 후 응답받을 방식을 지정|`_self`, `_blank`|`_self`|
 
+### `<input/>`
+- 사용자에게 입력 받을 데이터 양식
+
+|속성|의미|값|기본값|특징|
+|-|-|-|-|-|
+|autocomplete|사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부|`on`, `off`|`on`||
+|autofocus|페이지가 로드될 때 자동으로 포커스|Boolean| |문서 내 고유해야 함|
+|checked|양식이 선택되었음을 표시|Boolean| |`type` 속성 값이 `radio`, `checkbox`일 경우만|
+|disabled|양식을 비활성화|Boolean|||
+|form|`<form>`의 `id` 속성 값| ||	해당 `<form>`의 후손이 아닐 경우만|
+|list|참조할 `<datalist>`의 `id` 속성 값| |||
+|max|지정 가능한 최대 값|숫자||`type` 속성 값이 `number`일 경우만,<br> `min`속성보다 큰 값만 허용|
+|min|지정 가능한 최소 값|숫자||`type` 속성 값이 `number`일 경우만,<br> `max`속성보다 큰 값만 허용|
+|maxlength|입력 가능한 최대 문자 수|숫자|`524288`|`type` 속성 값이 `text`, `email`,<br> `password`, `tel`, `url`일 경우만|
+|multiple|둘 이상의 값을 입력 할 수 있는지 여부|Boolean||`type` 속성 값이 `email`, `file`일 경우만,<br> `email`일 경우 ,로 구분|
+|name|양식의 이름| |||
+|placeholder|사용자가 입력할 값의 힌트| ||`type` 속성 값이 `text`, `email`,<br> `password`, `tel`, `url`일 경우만|
+|readonly|수정 불가한 읽기 전용|Boolean| ||
+|step|유효한 증감 숫자의 간격|숫자|`1`|`type` 속성 값이 `number`, `range`일 경우만|
+|src|이미지의 URL|URL| |`type` 속성 값이 `image`일 경우만|
+|alt|이미지의 대체 텍스트| ||`type` 속성 값이 `image`일 경우만|
+|type|입력 받을 데이터의 종류|아래참조|`text`||
+|value|양식의 초기 값| |||
+
+#### 데이터 종류(Type)의 값(Value)
+- `type` 속성에 입력할 수 있는 값의 목록
+  
+> 추후 업뎃
+
