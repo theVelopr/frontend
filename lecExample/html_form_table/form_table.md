@@ -78,6 +78,7 @@
 |target|서버로 전송 후 응답받을 방식을 지정|`_self`, `_blank`|`_self`|
 
 ### `<input/>`
+---
 - 사용자에게 입력 받을 데이터 양식
 
 |속성|의미|값|기본값|특징|
@@ -124,4 +125,179 @@
 |text|일반 텍스트||
 |url|절대 URL||
 
+### `<label>`
+---
+- labelable의 제목(Caption)
+  - `for` 속성으로 라벨 가능 요소를 참조하거나 컨텐츠로 포함
+  - labelable elements : `<button>`, `<input>`, `<progress>`, `<select>`, `<textarea>`
+- inline 요소
+
+|속성|의미|
+|for|참조할 레벨 가능 요소의 `id`속성 값|
+
+- 예시
+  ```html
+  <!-- 라벨 가능 요소를 참조 -->
+  <input type="checkbox" id="user-agreement" />
+  <label for="user-agreement">동의하십니까?</label>
+
+  <!-- 라벨 가능 요소를 포함 -->
+  <label><input type="checkbox" />동의하십니까?</label>
+  ```
+
+### `<button>`
+---
+- 선택 가능한 버튼을 지정
+- inline-block 요소
+
+|속성|의미|값|특징|
+|-|-|-|-|
+|autogocus|페이지가 로드될 때 자동으로 포커스|Boolean|문서 내 고유해야 함|
+|disabled|버튼을 비활성화|Boolean||
+|form|`<form>`의 `id` 속성 값| |해당 `<form>`의 후손이 아닐 경우만|
+|name|폼 데이터와 함께 전송되는 버튼의 이름|||
+|type|버튼 타입|`button`, `reset`, `submit`||
+
+### `<textarea>`
+---
+- 여러 줄의 일반 텍스트 양식
+
+|속성|의미|값|기본값|특징|
+|-|-|-|-|-|
+|autocomplete|자동완성기능|`on`,`off`|`on`||
+|autofocus|페이지가 로드될 때 자동으로 포커스|Boolean| |문서 내 고유해야 함|
+|disabled|비활성화|Booealn||
+|form|`<form>`의 `id` 속성 값| |해당 `<form>`의 후손이 아닐 경우만|
+|maxlength|입력 가능한 최대 문자 수|숫자|무한||
+|name|양식의 이름||||
+|placeholder|사용자가 입력할 값의 힌트||||
+|readonly|읽기전용|Boolean|||
+|rows|양식의 줄 수|숫자|`2`||
+
+### `<fieldset>`, `<legend>`
+---
+- 같은 목적의 양식을 그룹화(`<fieldset>`)하여 제목(`<legend>`)을 지정
+- block 요소
+
+- 예시
+  ```html
+  <form>
+    <fieldset>
+      <legend>Coffee Size</legend>
+      <label>
+          <input type="radio" name="size" value="tall" />
+          Tall
+      </label>
+      <label>
+          <input type="radio" name="size" value="grande" />
+          Grande
+      </label>
+      <label>
+         <input type="radio" name="size" value="venti" />
+          Venti
+      </label>
+    </fieldset>
+  </form>
+  ```
+
+#### `<fieldset>`
+---
+- 같은 목적의 양식을 그룹화
+
+|속성|의미|값|
+|-|-|-|
+|disabled|그룹 내 모든 양식 요소를 비활성화|Boolean|
+|form|그룹이 속할 하나 이상의 `<form>`의 `id` 속성 값||
+|name|그룹의 이름||
+
+### `<select>`, `<datalist>`, `<optgroup>`, `<option>`
+---
+- 옵션(`<option>`,`<optgroup>`) 의 선택 메뉴(`<select>`)나 자동완성(`<datalist>`)을 제공
+- 예시
+  ```html
+  <select>
+    <optgroup label="Coffee">
+      <option>Americano</option>
+      <option>Caffe Mocha</option>
+      <option label="Cappuccino" value="Cappuccino"></option>
+    </optgroup>
+    <optgroup label="Latte" disabled>
+      <option>Caffe Latte</option>
+      <option>Vanilla Latte</option>
+    </optgroup>
+    <optgroup label="Smoothie">
+      <option>Plain</option>
+      <option>Strawberry</option>
+      <option>Banana</option>
+      <option>Mango</option>
+    </optgroup>
+  </select>
+  ```
+
+#### `<select>`
+---
+- 옵션을 선택하는 메뉴
+
+|속성|의미|값|기본값|
+|-|-|-|-|
+|autocomplete|자동완성기능|`on`,`off`|`on`|
+|disabled|비활성화|Boolean||
+|form|`<form>`의 `id` 속성 값|||
+|multiple|다중 선택 여부|Boolean||
+|name|양식의 이름|||
+|size|한 번에 볼 수 있는 행의 개수|숫자|`0`|
+
+#### `<datalist>`
+---
+- `<input>`에 미리 정의된 옵션을 지정하여 자동완성 기능을 제공하는 데 사용
+  - `<input>`의 `list` 속성 바인딩
+  - `<option>`을 포함하여 정의된 옵션을 지정
+
+- 예시
+  ```html
+  <input type="text" list="fruits">
+
+  <datalist id="fruits">
+    <option>Apple</option>
+    <option>Orange</option>
+    <option>Banana</option>
+    <option>Mango</option>
+    <option>Fineapple</option>
+  </datalist>
+  ```
+
+#### `<optgroup>`
+---
+- `<option>`을 그룹화
+
+|속성|의미|값|
+|-|-|-|
+|label|(필수)옵션 그룹의 이름||
+|disabled|옵션 그룹의 비활성화|Boolean|
+
+#### `<option>`
+---
+- 선택 메뉴(`<select>`)나 자동완성(`<datalist>`)에서 사용될 옵션
+  - 선택적 Empty tag로 사용 가능
+
+|속성|의미|값|특성|
+|-|-|-|-|
+|label|표시될 옵션의 제목||생략되면 포함된 텍스트를 표시|
+|disabled|옵션 비활성화|Boolean||
+|value|양식으로 제출될 값||생략되면 포함된 텍스트를 표시|
+|selected|옵션이 선택되었음을 표시|Boolean||
+
+### `<progress>`
+- 작업의 완료 진행률을 표시
+- inline-block 요소
+- 예시
+  ```html
+  <progress value="70" max="100">70 % </progress>
+  ```
+
+
+|속성|의미|값|특징|
+|-|-|-|-|
+|max|작업의 총량|숫자||
+|value|작업의 진행량|숫자|`max`속성을 생략할 경우 `0`~`1`사이의 숫자여야 함
 
