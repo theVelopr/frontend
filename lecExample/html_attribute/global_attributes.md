@@ -39,3 +39,17 @@
   - `tabindex="-1"`을 통해 포커스는 가능하지만 탭 순서에서 제외 가능.
   - `tabindex="1"` 이상의 양수 값은 논리적 흐름을 방해하기 때문에 사용을 추천하지 않음.
   - 왠만하면 HTML이 작성된 순서대로 진행되도록 그대로 두는 것을 추천함
+
+## 절대경로와 상대경로
+- 상대경로
+  - ./(생략가능)  
+    - 기준경로에서 주변에 있으면 들어가기
+    - ex) `<img src="./images/abc.jpg>` or `<img src="images/abc.jpg>`
+  - ../ - 기준경로에서 나가기
+    - ex) 'background: url("../assets/images/abc.jpg");'
+  
+
+- 절대경로
+  - http
+  - /
+  - ex) `https://google.com`
