@@ -24,6 +24,7 @@
 ## data-*
 - 사용자 정의 데이터 속성을 지정
 - HTML에 JS에서 이용할 수 있는 데이터(정보)를 저장하는 용도로 사용
+- data- 뒤에 사용자가 원하는 이름을 입력하면됨. ex) data-my-name="Slim Shaddy"
 
 ## draggable
 - 요소가 Drag and Drop API를 사용 가능한지 여부를 결정

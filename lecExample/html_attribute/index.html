@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h2 title="이 부분은 제목2입니다!0">제목2</h2>
-    <a href="https://google.com" title="GOOGLE.COM">Google</a>
-    <div title="DIV 태그입니다.">DIV</div>
+    <div id="me" data-my-name="Slim Shaddy" data-my-age="999">Slim Shaddy</div>
+
+    <script>
+        const me = document.getElementsById("me");
+        console.log(me.dataset.myName);
+        console.log(me.dataset.myAge);
+    </script>
 </body>
 </html>
 
